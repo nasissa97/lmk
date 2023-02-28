@@ -13,7 +13,7 @@ export const register = ( app: express.Application ) => {
     app.get(`/food`, async (req: any, res) => {
         try {
             const foods = await axios.get(`https://api.spoonacular.com/food/search?apiKey=${key}&query=tacos&number=4`);
-            return res.json(foods);
+            return res.json(foods.data.searchResults);
         } catch ( err ) {
             // tslint:disable-next-line:no-console
             console.error(err);
