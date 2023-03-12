@@ -18,3 +18,5 @@ COPY . .
 
 # Runs the dev npm script to built & start the server
 CMD npm run start 
+
+EXPOSE 8080
